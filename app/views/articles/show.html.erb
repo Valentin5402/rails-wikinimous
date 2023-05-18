@@ -1,0 +1,9 @@
+<div class="container mt-4 col-8">
+  <h2>
+    <%= @article.title %>
+    <%= link_to '<i class="fa-solid fa-pen"></i>'.html_safe, edit_article_path, class: "text-dark fs-5" %>
+    <%= link_to '<i class="fa-solid fa-trash-can"></i>'.html_safe, article_path(@article), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "text-dark fs-5" %>
+  </h2>
+  <hr>
+  <p><%= @article.content %></p>
+</div>

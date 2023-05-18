@@ -1,0 +1,13 @@
+<div class="container col-8">
+  <ul class="list-unstyled">
+    <% @articles.each do |article| %>
+    <div class="row justify-content-center">
+      <li class="mt-4">
+        <%= link_to article.title, article_path(article), class: "text-decoration-none fs-3" %>
+        <br>
+        <%= article.content %>
+      </li>
+    </div>
+    <% end %>
+  </ul>
+</div>
